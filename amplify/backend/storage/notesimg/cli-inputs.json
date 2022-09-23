@@ -1,0 +1,14 @@
+{
+  "resourceName": "notesimg",
+  "policyUUID": "9252cee8",
+  "bucketName": "awsamplify0033a98dcdc54177b396f211d6354763",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
