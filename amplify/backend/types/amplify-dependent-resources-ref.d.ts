@@ -1,8 +1,6 @@
 export type AmplifyDependentResourcesAttributes = {
     "auth": {
-        "awsamplifyb8965f18": {
-            "IdentityPoolId": "string",
-            "IdentityPoolName": "string",
+        "users": {
             "UserPoolId": "string",
             "UserPoolArn": "string",
             "UserPoolName": "string",
@@ -20,6 +18,32 @@ export type AmplifyDependentResourcesAttributes = {
     "storage": {
         "notesimg": {
             "BucketName": "string",
+            "Region": "string"
+        }
+    },
+    "function": {
+        "usersDefineAuthChallenge": {
+            "Name": "string",
+            "Arn": "string",
+            "LambdaExecutionRole": "string",
+            "Region": "string"
+        },
+        "usersCreateAuthChallenge": {
+            "Name": "string",
+            "Arn": "string",
+            "LambdaExecutionRole": "string",
+            "Region": "string"
+        },
+        "usersVerifyAuthChallengeResponse": {
+            "Name": "string",
+            "Arn": "string",
+            "LambdaExecutionRole": "string",
+            "Region": "string"
+        },
+        "usersCustomMessage": {
+            "Name": "string",
+            "Arn": "string",
+            "LambdaExecutionRole": "string",
             "Region": "string"
         }
     }

@@ -1,0 +1,26 @@
+{
+  "trigger": true,
+  "modules": [
+    "verification-link"
+  ],
+  "parentResource": "users",
+  "functionName": "usersCustomMessage",
+  "resourceName": "usersCustomMessage",
+  "parentStack": "auth",
+  "triggerEnvs": [
+    {
+      "key": "RESOURCENAME",
+      "value": "resourceName"
+    }
+  ],
+  "triggerDir": "C:\\snapshot\\repo\\build\\node_modules\\@aws-amplify\\amplify-category-auth\\provider-utils\\awscloudformation\\triggers\\CustomMessage",
+  "triggerTemplate": "CustomMessage.json.ejs",
+  "triggerEventPath": "CustomMessage.event.json",
+  "roleName": "usersCustomMessage",
+  "skipEdit": true,
+  "REDIRECTURL": "a",
+  "EMAILSUBJECT": "a",
+  "EMAILMESSAGE": "a",
+  "RESOURCENAME": "resourceName",
+  "enableCors": false
+}

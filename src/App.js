@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
-import { API, Storage } from 'aws-amplify';
+import { API, Storage, Auth } from 'aws-amplify';
 import {
   Button,
   Flex,
@@ -21,8 +21,14 @@ import {
 const App = ({ signOut }) => {
   const [notes, setNotes] = useState([]);
 
+  // Auth.currentUserInfo()
+
   useEffect(() => {
     fetchNotes();
+    Auth.currentAuthenticatedUser({
+      bypassCache: false  // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
+    }).then(user => console.log(user))
+    .catch(err => console.log(err));
   }, []);
 
   // async function fetchNotes() {
@@ -97,8 +103,6 @@ const App = ({ signOut }) => {
       variables: { input: { id } },
     });
   }
-
-
 
   return (
     <View className="App">

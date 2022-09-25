@@ -8,3 +8,73 @@ type Note @model @auth(rules: [ { allow: public } ] ){
   description: String
   image: String
 }
+
+type User @model {
+	id : ID!
+	name : String!
+	surname : String!
+	email : String!
+	active : Boolean!
+	admin : Boolean!
+	general_admin : Boolean!
+	verified : Boolean!
+	sign_up_date : String!
+}
+
+type Modifications @model {
+	id : ID!
+	user : User!
+	type : String!
+	date : String!
+}
+
+type Device @model {
+	id : ID!
+	name : String!
+	portable : Boolean!
+	os : String!
+	storage : Int!
+	ram : Int!
+	description : String!
+	images : [String]!
+}
+
+type Licence @model {
+	id : ID!
+	name : String!
+	year : Int!
+	compatibility : [String]!
+	category : [String]!
+	description : String!
+	images : [String]!
+}
+
+type Room @model {
+	id : ID!
+	name : String!
+	building : String!
+	proyector : Boolean!
+	wifi : Boolean!
+	board : Boolean!
+	air_conditioner : Boolean!
+	ethernet : Boolean!
+	computers : Boolean!
+	double_monitor : Boolean!
+	seats : Int!
+	energy_outlets : Int!
+	description : String!
+	images : [String]!
+}
+
+type Reservations @model {
+	id : ID!
+	user : User!
+	device : Device!
+	licence : Licence!
+	room : Room!
+	reserved_in : String!
+	start : String!
+	end : String!
+	used : Boolean!
+	canceled : Boolean!
+}
