@@ -13,9 +13,6 @@
       "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-amplify9c885140ff434-staging-12616-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
-      "auth": {
-        "users": {}
-      },
       "function": {
         "usersDefineAuthChallenge": {
           "deploymentBucketName": "amplify-amplify9c885140ff434-staging-12616-deployment",
@@ -37,6 +34,9 @@
           "deploymentBucketName": "amplify-amplify9c885140ff434-staging-12616-deployment",
           "s3Key": "amplify-builds/usersCustomMessage-6955484c4d336d457862-build.zip"
         }
+      },
+      "auth": {
+        "awsamplify3f1c8d7e": {}
       }
     }
   }

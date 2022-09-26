@@ -1,62 +1,10 @@
 {
   "auth": {
-    "userPoolGroups": {
-      "service": "Cognito-UserPool-Groups",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [
-        {
-          "category": "auth",
-          "resourceName": "users",
-          "attributes": [
-            "UserPoolId",
-            "AppClientIDWeb",
-            "AppClientID"
-          ]
-        }
-      ]
-    },
-    "users": {
+    "awsamplify3f1c8d7e": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
-      "dependsOn": [
-        {
-          "category": "function",
-          "resourceName": "usersDefineAuthChallenge",
-          "triggerProvider": "Cognito",
-          "attributes": [
-            "Arn",
-            "Name"
-          ]
-        },
-        {
-          "category": "function",
-          "resourceName": "usersCreateAuthChallenge",
-          "triggerProvider": "Cognito",
-          "attributes": [
-            "Arn",
-            "Name"
-          ]
-        },
-        {
-          "category": "function",
-          "resourceName": "usersVerifyAuthChallengeResponse",
-          "triggerProvider": "Cognito",
-          "attributes": [
-            "Arn",
-            "Name"
-          ]
-        },
-        {
-          "category": "function",
-          "resourceName": "usersCustomMessage",
-          "triggerProvider": "Cognito",
-          "attributes": [
-            "Arn",
-            "Name"
-          ]
-        }
-      ],
-      "customAuth": true,
+      "dependsOn": [],
+      "customAuth": false,
       "frontendAuthConfig": {
         "socialProviders": [],
         "usernameAttributes": [
@@ -67,13 +15,8 @@
           "NAME"
         ],
         "passwordProtectionSettings": {
-          "passwordPolicyMinLength": "12",
-          "passwordPolicyCharacters": [
-            "REQUIRES_LOWERCASE",
-            "REQUIRES_UPPERCASE",
-            "REQUIRES_NUMBERS",
-            "REQUIRES_SYMBOLS"
-          ]
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
         },
         "mfaConfiguration": "OFF",
         "mfaTypes": [

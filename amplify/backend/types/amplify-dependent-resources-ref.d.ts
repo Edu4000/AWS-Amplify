@@ -1,6 +1,8 @@
 export type AmplifyDependentResourcesAttributes = {
     "auth": {
-        "users": {
+        "awsamplify3f1c8d7e": {
+            "IdentityPoolId": "string",
+            "IdentityPoolName": "string",
             "UserPoolId": "string",
             "UserPoolArn": "string",
             "UserPoolName": "string",
